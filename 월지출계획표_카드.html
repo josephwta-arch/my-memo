@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>월 지출 계획표 · 2026.07 기준</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#22262B;--muted:#6C7378;--line:#DDE0DA;--bg:#F4F5F2;--paper:#FFF;
+--red:#C0392F;--blue:#1F4E96;--band:#EEF1EA;--red-soft:#F6E4E1;--blue-soft:#E3EAF5}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:'Pretendard',-apple-system,sans-serif;line-height:1.55}
+.num{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.wrap{max-width:560px;margin:0 auto;padding:24px 14px 60px}
+header{border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);padding:16px 2px 14px;margin-bottom:14px}
+.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--muted);font-weight:700}
+h1{font-size:21px;font-weight:800;margin-top:2px}
+.sub{font-size:12.5px;color:var(--muted);margin-top:2px}
+.flow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:16px}
+.f{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 10px 9px;text-align:center}
+.f .l{font-size:11px;color:var(--muted);font-weight:700}
+.f .v{font-size:16px;font-weight:600;margin-top:1px}
+.f.in .v{color:var(--blue)} .f.out .v{color:var(--ink)} .f.left{background:var(--band)} .f.left .v{color:var(--red);font-weight:700}
+h2{font-size:14px;font-weight:800;border-bottom:2px solid var(--ink);padding-bottom:6px;margin:20px 0 10px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th{font-size:11px;color:var(--muted);text-align:left;padding:8px 10px;background:var(--band);font-weight:700}
+th.r,td.r{text-align:right}
+td{padding:8px 10px;border-top:1px solid var(--line)}
+td.day{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:12.5px;white-space:nowrap;color:var(--muted);width:52px}
+tr.big td{font-weight:700}
+tr.sum td{background:var(--band);font-weight:800;border-top:2px solid var(--ink)}
+.note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.6}
+.env{display:flex;flex-direction:column;gap:8px}
+.e{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:8px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.e.red{border-left-color:var(--red)}
+.e .t{font-weight:700;font-size:13.5px}
+.e .d{font-size:12px;color:var(--muted)}
+.e .v{font-size:16px;font-weight:600;white-space:nowrap}
+.rules{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:13px}
+.rules li{margin:6px 0 6px 16px}
+.rules b{color:var(--red)}
+.foot{margin-top:24px;font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px}
+@media print{
+ body{background:#fff}
+ .wrap{max-width:100%;padding:0}
+ .f,.e,table,.rules{border-color:#bbb}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">MONTHLY BUDGET CARD</div>
+  <h1>월 지출 계획표</h1>
+  <div class="sub">2026.07 기준 · 급여일(20일) 사이클 · 통신비 조정 반영</div>
+</header>
+
+<div class="flow">
+  <div class="f in"><div class="l">월 수입</div><div class="v num">4,068,000</div></div>
+  <div class="f out"><div class="l">고정지출</div><div class="v num">3,557,000</div></div>
+  <div class="f left"><div class="l">잉여 (봉투)</div><div class="v num">511,000</div></div>
+</div>
+
+<h2>자동이체 일정 (날짜순)</h2>
+<table>
+<thead><tr><th>일자</th><th>항목</th><th class="r">금액</th></tr></thead>
+<tbody>
+<tr class="big"><td class="day">1~4</td><td>생활비 이체 (최선경)</td><td class="r num">2,200,000</td></tr>
+<tr><td class="day">1~4</td><td>변동지출 봉투 이체 → 622 체크</td><td class="r num">300,000</td></tr>
+<tr><td class="day">2</td><td>모퉁이돌선교회</td><td class="r num">20,000</td></tr>
+<tr><td class="day">3~4</td><td>녹즙 (풀무원)</td><td class="r num">59,000</td></tr>
+<tr><td class="day">9~11</td><td>사이버활동</td><td class="r num">53,000</td></tr>
+<tr><td class="day">13</td><td>저축 C</td><td class="r num">50,000</td></tr>
+<tr class="big"><td class="day">14</td><td>마이너스통장 이자</td><td class="r num">155,000</td></tr>
+<tr><td class="day">19~20</td><td>모친 회비 + 남전도회</td><td class="r num">65,000</td></tr>
+<tr><td class="day">20</td><td>저축 A·B·D (10+5+5만)</td><td class="r num">200,000</td></tr>
+<tr><td class="day">20</td><td>현대해상 보험 2건</td><td class="r num">144,000</td></tr>
+<tr><td class="day">23</td><td>삼성화재 보험</td><td class="r num">72,650</td></tr>
+<tr><td class="day">25</td><td>우체국 보험 3건</td><td class="r num">130,000</td></tr>
+<tr><td class="day">27</td><td>가족회비</td><td class="r num">40,000</td></tr>
+<tr><td class="day">월중</td><td>통신비 (59,000+부가 10,000+대행 22,990)</td><td class="r num">92,000</td></tr>
+<tr><td class="day">월중</td><td>구독 (우주패스+구글플레이+오토케어)</td><td class="r num">51,500</td></tr>
+<tr><td class="day">월중</td><td>점심값 (카드)</td><td class="r num">110,000</td></tr>
+<tr><td class="day">월중</td><td>기름값 (카드)</td><td class="r num">115,000</td></tr>
+<tr class="sum"><td></td><td>고정지출 합계</td><td class="r num">3,557,000</td></tr>
+</tbody>
+</table>
+<div class="note">유튜브 프리미엄 해지 반영 · 구글플레이 분기 결제(1·4·7·10월 26,000원)는 월 환산 포함 · 우체국은 25~27일 사이 3건 분할 출금</div>
+
+<h2>잉여 511,000원 배분</h2>
+<div class="env">
+  <div class="e"><div><div class="t">변동지출 봉투</div><div class="d">마트 · 저녁 외식 · 쇼핑 — 622 체크카드만 사용</div></div><div class="v num">300,000</div></div>
+  <div class="e"><div><div class="t">경조사 · 예비비</div><div class="d">미사용분 다음 달 이월</div></div><div class="v num">150,000</div></div>
+  <div class="e red"><div><div class="t">버퍼</div><div class="d">초과근무수당 없는 달의 안전판</div></div><div class="v num">61,000</div></div>
+</div>
+
+<h2>지키는 규칙</h2>
+<div class="rules">
+<ul>
+<li>변동지출은 <b>622 체크카드로만</b>. 봉투 30만원이 떨어지면 그 달은 끝.</li>
+<li>신용카드는 <b>점심 · 기름 · 통신 · 구독 전용</b> (합계 약 37만원 상한).</li>
+<li>초과근무수당이 없는 달(−66.7만)은 봉투를 20만으로 축소 + 예비비로 흡수.</li>
+<li>12월 평가급 · 연말정산 환급은 <b>전액 마이너스통장 상환</b> — 생활비 전용 금지.</li>
+<li>여행 · 대형 지출은 월 계획 밖 — 반드시 사전에 별도 재원 지정.</li>
+</ul>
+</div>
+
+<div class="foot">기준 데이터: 하나은행 753·622·679 + 하나카드 (2025.01–2026.06 실적) · 수입은 2026.5월 실급여 기준 · 대출이자는 잔액 −4,550만원 기준이며 상환 시 감소</div>
+
+</div>
+</body>
+</html>
